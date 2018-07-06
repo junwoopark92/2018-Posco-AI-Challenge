@@ -3,3 +3,5 @@ data/
 *.tsv
 *.csv
 .ipynb_checkpoints
+.idea/
+*.model
