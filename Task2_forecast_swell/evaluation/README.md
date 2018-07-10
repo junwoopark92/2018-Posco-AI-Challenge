@@ -1,7 +1,9 @@
 # Evaluation
 
 ## Usage
-```$ python eval.py prediction.xlsx validation.xlsx```
+```
+$ python eval.py prediction.xlsx validation.xlsx
+```
 
 
 ## Description
@@ -11,7 +13,7 @@
 	* 수정하지 않도록 주의
 * prediction.xlsx
 	* [Target Date for Validation](#target-date-for-validation)의 각 날(data)에 대한 총 24시간의 예측이 연속적으로 기록되어야 하고, 모든 날(25일)에 대한 24시간 기록을 모두 이어 붙여야 함(concatenate)
-	* 예를 들어, [14051700, 14051701, ... 14051723, 14070500, 14070501, ... 17121023]와 같이 기록이 연결시켜 출력
+	* 예를 들어, [14051700, 14051701, ... , 14051723, 14070500, 14070501, ... , 17121023]와 같이 기록을 연결시켜 출력
 	* 총 24(시간) * 25(일) = 600개의 row
 * eval.py
 	* argument로 주어지는 파일의 평가 결과(official score)를 출력
