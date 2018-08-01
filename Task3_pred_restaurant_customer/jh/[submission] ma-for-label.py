@@ -194,8 +194,9 @@ train_df = df.drop(df[df['일자'].isin(test_df['일자'].unique())].index)
 train_y = train_df['수량']
 train_x = train_df.drop(['수량', '일자'], axis=1)
 
-test_x = df[df['일자'].isin(test_df['일자'].unique())]
-test_x = test_x.drop(['수량', '일자'], axis=1)
+test_df = df[df['일자'].isin(test_df['일자'].unique())]
+test_x = test_df.drop(['수량', '일자'], axis=1)
+test_x_iter = test_df.drop(['수량'], axis=1)
 
 
 # #### 2) Train Model
@@ -234,7 +235,7 @@ model = RandomForestRegressor(n_estimators = 100, random_state = 10, warm_start=
 # In[24]:
 
 print("Start Prediction !")
-pred = iterative_train_and_predict(model, train_df, test_x)
+pred = iterative_train_and_predict(model, train_df, test_x_iter)
 
 
 # #### 3) Prediction
