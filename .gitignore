@@ -5,3 +5,6 @@ data/
 .ipynb_checkpoints
 .idea/
 *.model
+*.jpg
+*.jpeg
+*.pdf
